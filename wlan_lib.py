@@ -2,8 +2,6 @@ import network
 from network import WLAN
 from time import sleep_ms
 
-network.WLAN(network.STA_IF).active(False)
-
 def scan_wifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
