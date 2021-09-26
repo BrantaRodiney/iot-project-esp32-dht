@@ -29,7 +29,8 @@ start_time = int(time())
 while (True):
     elapsed_time = int(time()) - start_time
     if elapsed_time % time_interval_thingspeak == 0:
-        thingspeak_lib.send_data()
+        thingspeak_lib.receive_sensor_data_and_post_it()
     if elapsed_time % time_interval_local == 0:
         dht_sensor.temperature_humidity_monitor(temperature,humidity)
     sleep(1)
+    
