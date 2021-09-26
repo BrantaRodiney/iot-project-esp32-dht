@@ -1,5 +1,4 @@
 import network
-from network import WLAN
 from time import sleep_ms
 
 def scan_wifi():
