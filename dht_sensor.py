@@ -1,5 +1,5 @@
-from machine import Pin
 import dht
+from machine import Pin
 from time import sleep_ms
 
 dht = dht.DHT11(Pin(4))
@@ -19,9 +19,4 @@ def temperature_humidity_monitor(min_temperature_to_turn_relay_on, min_humidity_
         relay.value(1)
     else:
         relay.value(0)
-        
-def dht_system_loop(min_temperature_to_turn_relay_on,min_humidity_to_turn_relay_on):
-    while True:
-        temperature_humidity_monitor(min_temperature_to_turn_relay_on,min_humidity_to_turn_relay_on)
-        sleep_ms(4000)
         
